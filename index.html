@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Museu Virtual das Mulheres na Química</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+<h1 class="logo">
+⚗ Museu Virtual das Mulheres na Química
+</h1>
+
+
+<ul>
+
+<li><a href="#inicio">Início</a></li>
+<li><a href="#cientistas">Cientistas</a></li>
+<li><a href="#linha">Linha do Tempo</a></li>
+<li><a href="#quiz">Quiz</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+
+
+<section class="hero" id="inicio">
+
+
+<div class="hero-text">
+
+
+<h2>
+Mulheres que transformaram a Química
+</h2>
+
+
+<p>
+Conheça cientistas que enfrentaram desafios e deixaram
+contribuições importantes para a ciência.
+</p>
+
+
+<a class="btn" href="#cientistas">
+Explorar Museu
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="sobre">
+
+
+<h2>
+Sobre o Museu
+</h2>
+
+
+<p>
+Este museu virtual apresenta histórias, descobertas e
+contribuições de mulheres que fizeram parte da evolução
+da química e das ciências.
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section id="cientistas">
+
+
+<h2 class="titulo">
+Cientistas em Destaque
+</h2>
+
+
+<div class="container">
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\marie-curie.jpg">
+
+<h3>Marie Curie</h3>
+
+<p>
+Descobriu os elementos rádio e polônio e realizou
+pesquisas pioneiras sobre radioatividade.
+</p>
+
+<button onclick="abrirModal('curie')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\rosalind-franklin.jpg">
+
+<h3>Rosalind Franklin</h3>
+
+<p>
+Suas pesquisas com raios X ajudaram a revelar a
+estrutura do DNA.
+</p>
+
+<button onclick="abrirModal('franklin')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\ada-yanath.jpg">
+
+<h3>Ada Yonath</h3>
+
+<p>
+Estudou a estrutura dos ribossomos e recebeu o Nobel
+de Química.
+</p>
+
+<button onclick="abrirModal('yonath')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\stephanie-kwolek.jpg">
+
+<h3>Stephanie Kwolek</h3>
+
+<p>
+Criadora do Kevlar, material resistente usado em
+diversas tecnologias.
+</p>
+
+<button onclick="abrirModal('kwolek')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\bertha-lutz.jpg">
+
+<h3>Bertha Lutz</h3>
+
+<p>
+Cientista brasileira, bióloga e pesquisadora que
+contribuiu para o desenvolvimento científico no Brasil.
+</p>
+
+<button onclick="abrirModal('bertha')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\katherine-johnson.jpg">
+
+<h3>Katherine Johnson</h3>
+
+<p>
+Cientista da NASA que realizou cálculos essenciais
+para missões espaciais.
+</p>
+
+<button onclick="abrirModal('katherine')">
+Ver mais
+</button>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<img src="imagens\ada-lovelace.jpg">
+
+<h3>Ada Lovelace</h3>
+
+<p>
+Considerada a primeira programadora da história,
+unindo matemática e tecnologia.
+</p>
+
+<button onclick="abrirModal('lovelace')">
+Ver mais
+</button>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="linha">
+
+
+<h2 class="titulo">
+Linha do Tempo
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="evento">
+<h3>1867</h3>
+<p>Nascimento de Marie Curie.</p>
+</div>
+
+
+<div class="evento">
+<h3>1898</h3>
+<p>Descoberta do rádio e polônio por Marie Curie.</p>
+</div>
+
+
+<div class="evento">
+<h3>1920</h3>
+<p>Nascimento de Rosalind Franklin.</p>
+</div>
+
+
+<div class="evento">
+<h3>1928</h3>
+<p>Nascimento de Katherine Johnson.</p>
+</div>
+
+
+<div class="evento">
+<h3>1930</h3>
+<p>Nascimento de Stephanie Kwolek.</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="quiz">
+
+
+<h2 class="titulo">
+Quiz da Química
+</h2>
+
+
+<div class="quiz-box">
+
+
+<p>
+Quem descobriu os elementos rádio e polônio?
+</p>
+
+
+<button onclick="responder(true)">
+Marie Curie
+</button>
+
+
+<button onclick="responder(false)">
+Ada Lovelace
+</button>
+
+
+<button onclick="responder(false)">
+Katherine Johnson
+</button>
+
+
+<p id="resultado"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<div id="modal" class="modal">
+
+
+<div class="modal-content">
+
+
+<span onclick="fecharModal()">
+&times;
+</span>
+
+
+<h2 id="nome"></h2>
+
+
+<p id="texto"></p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+<p>
+Museu Virtual das Mulheres na Química © 2026
+</p>
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
